@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input , Output , EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'single-article',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-article.component.css']
 })
 export class SingleArticleComponent implements OnInit {
-
+@Input() article ;
+@Output() favorite ; 
   constructor() { }
 
   ngOnInit() {
