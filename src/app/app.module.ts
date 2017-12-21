@@ -14,6 +14,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { FollowingComponent } from './following/following.component';
 import { FollowersComponent } from './followers/followers.component';
 import { NotFoundComponent } from './static-pages/not-found/not-found.component';
+import { FullArticleComponent } from './full-article/full-article.component';
+import { CommentsComponent } from './comments/comments.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { NotFoundComponent } from './static-pages/not-found/not-found.component'
     FollowingComponent,
     FollowersComponent,
     NotFoundComponent,
+    FullArticleComponent,
+    CommentsComponent,
     
   ],
   imports: [
