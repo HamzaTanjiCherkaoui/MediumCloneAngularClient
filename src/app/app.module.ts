@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import {RoutesModule} from './app.routes'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -33,7 +34,8 @@ import { NotFoundComponent } from './static-pages/not-found/not-found.component'
   ],
   imports: [
     BrowserModule,
-    RoutesModule
+    RoutesModule, 
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

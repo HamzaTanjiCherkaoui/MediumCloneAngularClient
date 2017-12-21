@@ -11,13 +11,13 @@ const ENDPOINT = environment.ApiUrl+"articles"
 export class ArticlesService {
   
   constructor(private http : Http) { }
-  articles(){
-    return this.http.get(ENDPOINT).map(res =>res.json()).catch(null);
+  getArticles(){
+    return this.http.get(ENDPOINT).map(res =>res.json()["articles"]).catch(this.handleError);
   }
 
   handleError(error){
     // log Error in a log file or send the error to a third party
-    Observable.throw(error);
+    return Observable.throw(error);
     
   }
 }
