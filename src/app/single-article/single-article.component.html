@@ -5,19 +5,18 @@
     
     </div>
     <div class="pl3-ns order-2 order-2-ns  w-10-ns favorites">   
-      <span class="hits  ">43</span>  
+      <span class="hits  ">{{article.favoritesCount}}</span>  
     </div>
     <div class="w-100 w-80-ns pr3-ns order-3 order-3-ns">
-      <h1 class="f3 roboto mt0 lh-title">Tech Giant Invests Huge Money to Build a Computer Out of Science Fiction</h1>
+      <h1 class="f3 roboto mt0 lh-title">{{article.title}}</h1>
       <p class="f5 f6-l lh-copy roboto">
-        The tech giant says it is ready to begin planning a quantum computer, a powerful cpu machine that relies on subatomic particles
-        instead of transistors.
+        {{article.description}}
       </p>
 
       <p class="f6 lh-copy gray mv0">By
-        <span class="ttu">Robin Darnell</span>
+        <span class="ttu">{{article.author.username}}</span>
       </p>
-      <time class="f6 db gray">Nov. 21, 2016</time>
+      <time class="f6 db gray">{{article.createdAt}}</time>
     </div>
 
   </div>
