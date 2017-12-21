@@ -6,6 +6,12 @@ import { HomeComponent } from './home/home.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { SingleArticleComponent } from './single-article/single-article.component';
 import { LoginComponent } from './login/login.component';
+import { FeedComponent } from './feed/feed.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ConfirmComponent } from './confirm/confirm.component';
+import { ProfileComponent } from './profile/profile.component';
+import { FollowingComponent } from './following/following.component';
+import { FollowersComponent } from './followers/followers.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +19,13 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     ArticlesComponent,
     SingleArticleComponent,
-    LoginComponent
+    LoginComponent,
+    FeedComponent,
+    DashboardComponent,
+    ConfirmComponent,
+    ProfileComponent,
+    FollowingComponent,
+    FollowersComponent
   ],
   imports: [
     BrowserModule,
