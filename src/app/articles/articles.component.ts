@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input , Output , EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'articles',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticlesComponent implements OnInit {
   ar = [0,1,2,3,4];
+ @Input() articles;
   constructor() { }
 
   ngOnInit() {
