@@ -7,12 +7,18 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ConfirmComponent } from './confirm/confirm.component';
 import { NotFoundComponent } from './static-pages/not-found/not-found.component';
+import { FullArticleComponent } from './full-article/full-article.component';
 
 
 
 const appRoutes: Routes = [
     {
         path: '',
+        redirectTo : 'home',
+        pathMatch : 'full'
+    },
+    {
+        path: 'home',
         component: HomeComponent
     },
     {
@@ -26,6 +32,10 @@ const appRoutes: Routes = [
     {
         path : '404',
         component : NotFoundComponent
+    },
+    {
+        path:'home/:slug',
+        component : FullArticleComponent
     }
     
 ];

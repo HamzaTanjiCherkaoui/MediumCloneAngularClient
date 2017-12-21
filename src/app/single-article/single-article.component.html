@@ -7,7 +7,7 @@
       <span class="hits  ">{{article.favoritesCount}}</span>  
     </div>
     <div class="w-100 w-80-ns pr3-ns order-3 order-3-ns">
-      <h1 class="f3 roboto mt0 lh-title">{{article.title}}</h1>
+      <a [routerLink]="['/home', article.slug]"><h1 class="f3 roboto mt0 lh-title">{{article.title}}</h1></a>
       <p class="f5 f6-l lh-copy roboto">
         {{article.description}}
       </p>
