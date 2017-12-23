@@ -436,3 +436,10 @@ align-self: center;
 .title {
   font-size : 20px;
 }
+
+.pst-article-btn {
+  font-size: 15px;
+  padding: 5px;
+  width : 130px;
+  font-weight: 100;
+}
