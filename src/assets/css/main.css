@@ -333,7 +333,7 @@ app-.modal.default-gradient .header {
   border-radius: 50px; }
 
 
-app-home {
+app-root {
 display: grid;
 grid-template-rows: 100px 3fr 100px;
 grid-template-columns: 1fr;
