@@ -5,6 +5,7 @@ import {Observable} from 'rxjs/Rx';
 // Import RxJs required methods
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/delay';
 
 const ENDPOINT = environment.ApiUrl+"articles"
 @Injectable()
@@ -12,7 +13,7 @@ export class ArticlesService {
   
   constructor(private http : Http) { }
   getArticles(){
-    return this.http.get(ENDPOINT).map(res =>res.json()["articles"]).catch(this.handleError);
+    return this.http.get(ENDPOINT).delay(5000).map(res =>res.json()["articles"]).catch(this.handleError);
   }
 
   handleError(error){
