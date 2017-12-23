@@ -1,0 +1,61 @@
+body {
+    background : #eee;
+  }
+  .article-placeholder {
+    
+     background: #fff;
+      border-bottom: 1px solid;
+      border-color: #f6f7f8;
+      border-radius: 3px;
+      padding: 12px;
+      margin: 0 auto;
+    display :grid;
+    grid-gap:  12px;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows:    minmax(50px, auto);
+  }
+  @keyframes placeHolderShimmer{
+      0%{
+          background-position: -468px 0
+      }
+      100%{
+          background-position: 468px 0
+      }
+  }
+  
+  .animated-background {
+      border-radius: 10px;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-name: placeHolderShimmer;
+      animation-timing-function: linear;
+      background: #f6f7f8;
+      background: linear-gradient(to right, #eeeeee 8%, #fafafa 18%, #eeeeee 33%);
+      background-size: 800px 104px;
+      position: relative;
+  }
+  .article-left {
+    height : 100px;
+  }
+  
+  .article-right {
+    grid-column-start: 2;
+  grid-column-end:   3;
+    
+    
+  }
+  
+  .article-loader {
+    width :100%;
+    margin-bottom : 12px;
+  }
+  .heading {
+    height : 20px;
+    margin-bottom : 10px; 
+  }
+  .line {
+    height : 10px; 
+    margin-bottom : 5px;
+    width : 60%;
+  }

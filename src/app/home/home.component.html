@@ -21,7 +21,43 @@
       <div class="articles-list">
         <section class="mw7 center">
           <h2 class="roboto ph3 ph0-l">latest Articles</h2>
-          <articles [articles]="articles"></articles>
+          <div class = "article-loader" *ngIf="articles.length==0">
+              <div class="article-placeholder">
+                  <div class="animated-background article-left"></div>
+                <div class=" article-right">
+                  <div class="animated-background heading"></div>
+                  <div class="animated-background line"></div>
+                  <div class="animated-background line"></div>
+                  <div class="animated-background line"></div>
+                  <div class="animated-background line"></div>
+                  
+                  </div>
+               </div>
+               <div class="article-placeholder">
+                  <div class="animated-background article-left"></div>
+                <div class=" article-right">
+                  <div class="animated-background heading"></div>
+                  <div class="animated-background line"></div>
+                  <div class="animated-background line"></div>
+                  <div class="animated-background line"></div>
+                  <div class="animated-background line"></div>
+                  
+                  </div>
+               </div>
+               <div class="article-placeholder">
+                  <div class="animated-background article-left"></div>
+                <div class=" article-right">
+                  <div class="animated-background heading"></div>
+                  <div class="animated-background line"></div>
+                  <div class="animated-background line"></div>
+                  <div class="animated-background line"></div>
+                  <div class="animated-background line"></div>
+                  
+                  </div>
+               </div>
+              </div>
+              
+          <articles [articles]="articles" *ngIf="articles.length>1"></articles>
         </section>
 
       </div>
