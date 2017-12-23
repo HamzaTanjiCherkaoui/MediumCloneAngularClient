@@ -16,6 +16,7 @@ import { FollowersComponent } from './followers/followers.component';
 import { NotFoundComponent } from './static-pages/not-found/not-found.component';
 import { FullArticleComponent } from './full-article/full-article.component';
 import { CommentsComponent } from './comments/comments.component';
+import { HeaderComponent } from './shared/header/header.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { CommentsComponent } from './comments/comments.component';
     NotFoundComponent,
     FullArticleComponent,
     CommentsComponent,
+    HeaderComponent,
     
   ],
   imports: [
