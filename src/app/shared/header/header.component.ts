@@ -1,4 +1,5 @@
 import { Component, OnInit , Input } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -8,9 +9,10 @@ import { Component, OnInit , Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 @Input() isAuthenticated;
-  constructor() { }
+  constructor( private auth : AuthService) { }
 
   ngOnInit() {
+    this.auth.authChanged.subscribe(res => this.isAuthenticated =true)
   }
 
 }

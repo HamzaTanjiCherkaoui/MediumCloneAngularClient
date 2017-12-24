@@ -21,6 +21,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { NewArticleComponent } from './new-article/new-article.component';
 import { EventEmitterService } from './services/event-emitter.service';
 import { CookieModule, CookieService } from 'ngx-cookie';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -50,7 +51,7 @@ import { CookieModule, CookieService } from 'ngx-cookie';
     CookieModule.forRoot(),
     FormsModule
   ],
-  providers: [EventEmitterService, CookieService],
+  providers: [EventEmitterService, CookieService , AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
