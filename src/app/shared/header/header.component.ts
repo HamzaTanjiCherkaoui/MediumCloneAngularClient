@@ -12,7 +12,9 @@ export class HeaderComponent implements OnInit {
   constructor( private auth : AuthService) { }
 
   ngOnInit() {
-    this.auth.authChanged.subscribe(res => this.isAuthenticated =true)
+    this.auth.authChanged.subscribe(res => this.isAuthenticated =res)
   }
-
+logout() {
+  this.auth.logout();
+}
 }

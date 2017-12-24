@@ -34,6 +34,7 @@ export class AuthService {
 	
 	logout() {
 		this.cookie.remove('auth_token');
+		this.authChanged.emit(false);
 		this.router.navigate(['/']);
 	}
 

@@ -381,12 +381,22 @@ grid-template-rows: 1fr;
   align-self: center;
   
 }
+.pst-article {
+  grid-column: 11/12;
+  
+  align-self: center;
+  
+}
 .profile-header {
   grid-column: 10/13;
   
   align-self: center;
   
 }
+.profile-header button {
+  margin-left : 10px;
+}
+
 a {
 color: #274057;
 text-decoration: none;
