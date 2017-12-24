@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
+import { ArticlesService } from '../services/articles.service';
 
 @Component({
   selector: 'app-full-article',
@@ -8,14 +9,19 @@ import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
   styleUrls: ['./full-article.component.css']
 })
 export class FullArticleComponent implements OnInit , OnDestroy {
-  slug: String;
+  article;
   private sub: any;
-  constructor(private route : ActivatedRoute) { }
+
+  constructor(private route : ActivatedRoute , private articlesService : ArticlesService) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(
-      res => this.slug = res['slug'],
-      // loadFullArticle
+      res => {
+        this.articlesService.getArticle(res['slug']).subscribe(
+          article => this.article = article
+        )
+      },
+
       err => console.log(err)
     )
   }
