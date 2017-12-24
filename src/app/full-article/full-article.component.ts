@@ -6,7 +6,8 @@ import { ArticlesService } from '../services/articles.service';
 @Component({
   selector: 'app-full-article',
   templateUrl: './full-article.component.html',
-  styleUrls: ['./full-article.component.css']
+  styleUrls: ['./full-article.component.css'],
+  providers : [ArticlesService]
 })
 export class FullArticleComponent implements OnInit , OnDestroy {
   article;

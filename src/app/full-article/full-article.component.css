@@ -1,7 +1,8 @@
-body {
+.single-article {
     display: grid;
-    grid-template-rows: 3fr 59px;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     background-color: #000;
     padding: 10px;
+    min-height: 500px;
     }

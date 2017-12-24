@@ -16,7 +16,7 @@ export class ArticlesService {
     return this.http.get(ENDPOINT).delay(5000).map(res => res.json()["articles"]).catch(this.handleError);
   }
   getArticle(slug) {
-    return this.http.get(ENDPOINT+"/"+slug).delay(5000).map(res => res.json()["article"]).catch(this.handleError);
+    return this.http.get(ENDPOINT+"/"+slug).delay(2000).map(res => res.json()["article"]).catch(this.handleError);
   }
   handleError(error) {
     // log Error in a log file or send the error to a third party
