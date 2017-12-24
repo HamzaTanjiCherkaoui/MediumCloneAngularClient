@@ -1,6 +1,5 @@
-import { Component, OnInit , Output , EventEmitter } from '@angular/core';
-import { AuthService } from '../services/auth.service';
-
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { AuthService } from '../services/auth.service'; 
 
 @Component({
   selector: 'app-login',
@@ -9,16 +8,21 @@ import { AuthService } from '../services/auth.service';
   providers: [AuthService]
 })
 export class LoginComponent implements OnInit {
-  user: any;
-  constructor(private auth : AuthService) {
-    this.user ={};
-   }
+  user:  {email ?: string , password?: string};
+  constructor(private auth: AuthService) {
+    this.user = {};
+  }
 
   ngOnInit() {
   }
-  login(){
-    console.log(this.user)
-  // this.auth.login(user)
+  login() {
+
+    this.auth.login(this.user).subscribe(
+      res => {
+        console.log(res)
+      },
+      err => console.log(err)
+    )
   }
 
 }

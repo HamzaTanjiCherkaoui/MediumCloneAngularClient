@@ -12,7 +12,7 @@ const ENDPOINT = environment.ApiUrl + "users"
 @Injectable()
 export class AuthService {
   constructor(private http: Http , private cookie : CookieService , private router : Router) { }
-  
+   
   login(user) {
     return this.http.post(ENDPOINT+"/login",JSON.stringify({user:user})).map(res => res.json()["user"]).catch(this.handleError);
   }

@@ -20,6 +20,7 @@ import { CommentsComponent } from './comments/comments.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { NewArticleComponent } from './new-article/new-article.component';
 import { EventEmitterService } from './services/event-emitter.service';
+import { CookieModule, CookieService } from 'ngx-cookie';
 
 
 @NgModule({
@@ -46,9 +47,10 @@ import { EventEmitterService } from './services/event-emitter.service';
     BrowserModule,
     RoutesModule, 
     HttpModule,
+    CookieModule.forRoot(),
     FormsModule
   ],
-  providers: [EventEmitterService],
+  providers: [EventEmitterService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
