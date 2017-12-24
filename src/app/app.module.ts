@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import {RoutesModule} from './app.routes'
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ArticlesComponent } from './articles/articles.component';
@@ -18,6 +19,7 @@ import { FullArticleComponent } from './full-article/full-article.component';
 import { CommentsComponent } from './comments/comments.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { NewArticleComponent } from './new-article/new-article.component';
+import { EventEmitterService } from './services/event-emitter.service';
 
 
 @NgModule({
@@ -43,9 +45,10 @@ import { NewArticleComponent } from './new-article/new-article.component';
   imports: [
     BrowserModule,
     RoutesModule, 
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [EventEmitterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
