@@ -376,8 +376,14 @@ grid-template-rows: 1fr;
 
 }
 .slogon-text {
-  grid-column: 2/11;
+  grid-column: 2/10;
   text-align: left;
+  align-self: center;
+  
+}
+.profile-header {
+  grid-column: 10/13;
+  
   align-self: center;
   
 }
