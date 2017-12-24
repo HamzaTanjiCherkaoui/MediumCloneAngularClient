@@ -17,13 +17,12 @@ export class AuthService {
     return this.http.post(ENDPOINT+"/login",{user:user}).map(res => res.json()["user"]).catch(this.handleError);
   }
   
-  setAccessToken(data){
-		
-		var token = data.payload;
-		this.cookie.put('auth_token', token);
-		this.router.navigate(['/account']);
-		return Observable.timer(1000).mapTo({token : data.payload});
+  setAccessToken(user){
 
+		this.cookie.put('auth_token', user.token);
+		this.cookie.put('username', user.usernam);
+		this.router.navigate(['/home']);
+	
 	}
 
 	isAuthenticated() {

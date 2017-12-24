@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
     this.auth.login(this.user).subscribe(
       res => {
-        console.log(res)
+        this.auth.setAccessToken(res);
       },
       err => console.log(err)
     )

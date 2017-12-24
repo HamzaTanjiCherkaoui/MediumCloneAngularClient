@@ -6,9 +6,11 @@
       <div class="slogon-text">
         <p class="">Share your thought with everyone.</p>
       </div>
-      <div class="text-center">
+      <div class="text-center" *ngIf="!isAuthenticated">
         <button class="box primary-bg round-borders roboto pst-article-btn">
           <b>Post an article</b>
         </button>
       </div>
+      <div class="text-center" *ngIf="isAuthenticated">
+          <a href="">Hello Hamza </a>      
     </div>
