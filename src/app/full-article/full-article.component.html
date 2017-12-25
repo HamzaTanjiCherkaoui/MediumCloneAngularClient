@@ -1,20 +1,31 @@
 <div class="single-article">
   <header class="white-bg ">
     <article class="cf ph3 ph5-ns pv5">
-        <div *ngIf="article"> 
-      <header class="fn fl-ns w-50-ns pr4-ns">
-        
+      <div class="article-loader" *ngIf="!article">
+        <div class="article-placeholder">
+          <div class="animated-background article-left"></div>
+          <div class=" article-right">
+            <div class="animated-background heading"></div>
+            <div class="animated-background line"></div>
+            <div class="animated-background line"></div>
+            <div class="animated-background line"></div>
+            <div class="animated-background line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="article">
+        <header class="fn fl-ns w-50-ns pr4-ns">
           <h1 class="mb3 mt0 roboto lh-title">{{article.title}}</h1>
           <time class="f6 ttu tracked gray">{{article.author.username}}</time>
-      </header>
-      <div class="fn fl-ns w-50-ns">
-        <p>
-          {{article.body}}
-        </p>
-
-      </div>
+        </header>
+        <div class="fn fl-ns w-50-ns">
+          <p>
+            {{article.body}}
+          </p>
+        </div>
       </div>
     </article>
+
   </header>
-  </div>
-  
+</div>
