@@ -38,6 +38,10 @@ export class AuthService {
 		this.router.navigate(['/']);
 	}
 
+	signUp(user) {
+    return this.http.post(ENDPOINT,{user:user}).catch(this.handleError);
+  }
+  
   handleError(error) {
     // log Error in a log file or send the error to a third party
     return Observable.throw(error);
