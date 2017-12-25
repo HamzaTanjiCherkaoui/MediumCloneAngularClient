@@ -40,7 +40,10 @@ export class AuthService {
 
 	signUp(user) {
     return this.http.post(ENDPOINT,{user:user}).catch(this.handleError);
-  }
+	}
+	verify() {
+		this.router.navigate(['/confirm'],{queryParams : {doNotRedirect : true }});
+	}
   
   handleError(error) {
     // log Error in a log file or send the error to a third party
