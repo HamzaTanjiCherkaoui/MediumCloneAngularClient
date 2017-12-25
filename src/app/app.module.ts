@@ -22,6 +22,7 @@ import { NewArticleComponent } from './new-article/new-article.component';
 import { EventEmitterService } from './services/event-emitter.service';
 import { CookieModule, CookieService } from 'ngx-cookie';
 import { AuthService } from './services/auth.service';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { AuthService } from './services/auth.service';
     CommentsComponent,
     HeaderComponent,
     NewArticleComponent,
+    SignUpComponent,
     
   ],
   imports: [

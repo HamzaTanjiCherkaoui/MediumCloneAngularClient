@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { ConfirmComponent } from './confirm/confirm.component';
 import { NotFoundComponent } from './static-pages/not-found/not-found.component';
 import { FullArticleComponent } from './full-article/full-article.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 
@@ -25,6 +26,11 @@ const appRoutes: Routes = [
         path: 'login',
         component: LoginComponent
     },
+    {
+        path: 'sign-up',
+        component: SignUpComponent
+    },
+    
     {
         path: 'confirm',
         component: ConfirmComponent
