@@ -42,7 +42,7 @@ export class AuthService {
     return this.http.post(ENDPOINT,{user:user}).catch(this.handleError);
 	}
 	verify() {
-		this.router.navigate(['/confirm'],{queryParams : {doNotRedirect : true }});
+		this.router.navigate(['/confirm'],{queryParams : {doNotRedirect : true },skipLocationChange : true}, );
 	}
   
   handleError(error) {
