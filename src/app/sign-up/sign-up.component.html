@@ -1,27 +1,32 @@
 <div class="box content-bg medium-pd">
     <div class="content-wrapper">
       <div class="main  round-borders">
-        <div class=" flex items-center w-100">
-          <article class="pa4 black-80 w-100">
+        <div class=" flex justify-center w-100">
+          <article class="pa4 black-80 w-50">
             <h1 class="title">Sign Up</h1>
             <div>
               <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+                  <legend class="ph0 mh0 fw6 clip">Sign Up</legend>
+                  <div class="mt3">
+                    <label class="db fw4 lh-copy f6" for="username">Username</label>
+                    <input class="form-input w-100 " type="text" name="username" [(ngModel)]="user.username" id="username" placeholder="Type your username here ">
+                  </div>
                 <legend class="ph0 mh0 fw6 clip">Sign Up</legend>
                 <div class="mt3">
                   <label class="db fw4 lh-copy f6" for="email-address">Email address</label>
-                  <input class="form-input w-100 measure" type="email" name="email-address" [(ngModel)]="user.email" id="email-address" placeholder="type your email here ">
+                  <input class="form-input w-100 " type="email" name="email-address" [(ngModel)]="user.email" id="email-address" placeholder="Type your email here ">
                 </div>
                 <div class="mt3">
                   <label class="db fw4 lh-copy f6" for="password">Password</label>
-                  <input class="form-input  w-100 measure" type="password" name="password" [(ngModel)]="user.password" id="password" placeholder="type your password here ">
+                  <input class="form-input  w-100 " type="password" name="password" [(ngModel)]="user.password" id="password" placeholder="Type your password here ">
                 </div>
                 <div class="mt3">
                     <label class="db fw4 lh-copy f6" for="password">Confirm Password</label>
-                    <input class="form-input  w-100 measure" type="password" name="confirmPassword" [(ngModel)]="user.confirmPassword" id="confirmPassword" placeholder="type your password here ">
+                    <input class="form-input  w-100 " type="password" name="confirmPassword" [(ngModel)]="user.confirmPassword" id="confirmPassword" placeholder="type your password here ">
                   </div>
               </fieldset>
               <div class="mt3">
-                <button class="b ph3 pv2 black-bg white-color grow pointer f6 roboto" (click)="login()">signUp </button>
+                <button class="b ph3 pv2 black-bg white-color grow pointer f6 roboto" (click)="signUp()">signUp </button>
               </div>
             </div>
           </article>
