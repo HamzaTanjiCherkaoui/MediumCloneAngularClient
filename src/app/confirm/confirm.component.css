@@ -1,0 +1,9 @@
+.confirm {
+    background-image:  url(https://fast.customer.io/j/lifecycle-email-relationship-buds.png);
+    background-size: cover;
+    height: 500px;
+}
+.confirm-form {
+    border-radius: 10px; 
+    opacity: 0.9;
+}

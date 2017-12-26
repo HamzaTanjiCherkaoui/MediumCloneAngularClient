@@ -1,3 +1,29 @@
-<p>
-  confirm works!
-</p>
+<div class="box content-bg medium-pd">
+  <div class="content-wrapper">
+    <div class="main  round-borders">
+      <div class=" confirm">
+        <div class=" flex justify-center w-100">
+          <article class="pa4 black-80 w-50  white-bg confirm-form">
+            <h1 class="title primary-color">Sign Up</h1>
+            <hr>
+            <h3 class="">Check your email to activate your account</h3>
+            <h5 class="error-color">Wrong Email ? resend the activation link bellow</h5>
+            <div>
+              <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+                <div class="mt3">
+                  <label class="db fw4 lh-copy f6" for="username">email</label>
+                  <input class="form-input w-100 " type="email" name="email" [(ngModel)]="email" id="email" placeholder="Type your email here ">
+                </div>
+
+              </fieldset>
+              <div class="mt3">
+                <button class="b ph3 pv2 black-bg white-color grow pointer f6 roboto" (click)="signUp()">Resend </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
