@@ -46,7 +46,7 @@ const appRoutes: Routes = [
         component : FullArticleComponent
     },
     {
-        path : 'dashboard',
+        path : 'account/dashboard',
         canActivate : [AuthGuard],
         component : DashboardComponent
         
