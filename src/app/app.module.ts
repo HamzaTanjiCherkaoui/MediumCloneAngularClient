@@ -23,6 +23,8 @@ import { EventEmitterService } from './services/event-emitter.service';
 import { CookieModule, CookieService } from 'ngx-cookie';
 import { AuthService } from './services/auth.service';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { MyArticlesComponent } from './my-articles/my-articles.component';
+import { FavoritesArticlesComponent } from './favorites-articles/favorites-articles.component';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     HeaderComponent,
     NewArticleComponent,
     SignUpComponent,
+    MyArticlesComponent,
+    FavoritesArticlesComponent,
     
   ],
   imports: [

@@ -5,15 +5,17 @@
       <div class="fl w-30 w-30-ns  center  pa2 " >
         <div class=" round-borders  bg-white pv4 sidebar">
             <ul class="list pl0 ml0 center  mw5 ba b--black-10 text-center  br3">
-                <li class="ph3 pv2 bb b--black-10  pointer pa2 roboto" >Profile</li>
-                <li class="ph3 pv2 bb b--black-10  pointer pa2 roboto" >Settings</li>
-                <li class="ph3 pv2 bb b--black-10  pointer pa2 roboto" >My articles</li>
-                <li class="ph3 pv2   pointer pa2 roboto" >my Favorites</li>
+                <li class="ph3 pv2 bb b--black-10  pointer pa2 roboto" ><a routerLink="profile">Profile</a></li>
+                <li class="ph3 pv2 bb b--black-10  pointer pa2 roboto" ><a router-link="">Settings</a></li>
+                <li class="ph3 pv2 bb b--black-10  pointer pa2 roboto" ><a routerLink="my-articles">My articles</a></li>
+                <li class="ph3 pv2   pointer pa2 roboto" ><a routerLink="my-favorites">My Favorites</a></li>
               </ul>
         </div>
       </div>
       <div class="fl w-70 w-70-ns pa2">
-        <div class=" round-borders bg-white pv4"></div>
+        <div class=" round-borders bg-white pv4">
+          <router-outlet></router-outlet>
+        </div>
       </div>
     </div>
   </div>

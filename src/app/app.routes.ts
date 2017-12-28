@@ -11,6 +11,9 @@ import { FullArticleComponent } from './full-article/full-article.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AuthGuard } from './guards/auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MyArticlesComponent } from './my-articles/my-articles.component';
+import { FavoritesArticlesComponent } from './favorites-articles/favorites-articles.component';
 
 
 
@@ -48,7 +51,27 @@ const appRoutes: Routes = [
     {
         path : 'account/dashboard',
         canActivate : [AuthGuard],
-        component : DashboardComponent
+        component : DashboardComponent,
+        children:[
+            {
+                path : 'profile',
+                component:ProfileComponent
+            },
+            {
+                path : 'my-articles',
+                component:MyArticlesComponent
+            },
+            {
+                path : 'my-favorites',
+                component:FavoritesArticlesComponent
+            },
+            {
+                path : '',
+                redirectTo : '/account/dashboard/profile',
+                pathMatch : 'full'
+            },
+            
+        ]
         
     }
     
